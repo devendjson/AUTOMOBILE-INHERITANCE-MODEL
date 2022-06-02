@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AUTOMOBILE INHERITANCE MODEL</title>
+  </head>
+  <body>
+    <h1>AUTOMOBILE INHERITANCE MODEL</h1>
+    <h3>Please see in console</h3>
+  </body>
+</html>
+<script>
+  const FourWeeler = {
+    tyre: "apollo",
+    sit: 5,
+    battery: "amaron",
+    oil: "castrol",
+    sitColor: "brown",
+    break: "disk",
+  };
+  let p1 = Object.create(FourWeeler);
+  let p2 = Object.create(FourWeeler, { name: { value: "Arya" } });
+  let p3 = Object.create(FourWeeler, { name: { value: "Vista" } });
+
+  console.log(p1);
+  console.log(p2);
+  console.log(p3);
+
+  // using constructor function
+  function FourWeeler1(n) {
+    this.name = n;
+    this.tyre = "apollo";
+    this.sit = 5;
+    this.battery = "amaron";
+    this.oil = "castrol";
+    this.sitColor = "brown";
+    this.break = "disk";
+  }
+
+  let car1 = new FourWeeler1("Indica");
+  console.log(car1);
+
+  let car2 = new FourWeeler1("Neon");
+  console.log(car2);
+</script>
